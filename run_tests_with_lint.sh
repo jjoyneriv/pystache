@@ -11,3 +11,6 @@ rm -f pep8.log pyflakes.log
 
 pep8 --max-line-length=120 pystache > pep8.log || true
 pyflakes pystache > pyflakes.log || true
+
+pip install pycodestyle
+pep8 --max-line-length=120 pystache > pycodestyle.log || true
