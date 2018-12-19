@@ -5,11 +5,12 @@
 set -e
 set -x
 
-rm -f pep8.log pyflakes.log
+rm -f pep8.log pyflakes.log pycodestyle.log
 
 ./test.py
 
-pep8 --max-line-length=120 pystache > pep8.log || true
+# pep8 --max-line-length=120 pystache > pep8.log || true
+
 pyflakes pystache > pyflakes.log || true
 
 pip install pycodestyle
